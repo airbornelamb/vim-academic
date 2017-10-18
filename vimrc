@@ -26,6 +26,10 @@ Plugin 'ervandew/supertab'
 Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'gcmt/wildfire.vim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'reedes/vim-pencil'
+Plugin 'junegunn/goyo'
+Plugin 'junegunn/limelight'
 
 "Front End
 Plugin 'pangloss/vim-javascript'
@@ -33,7 +37,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'miripiruni/CSScomb-for-Vim'
 
 "Color Schemes
-Plugin 'vim-scripts/wombat256.vim'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()            " required
 " }}}
@@ -100,6 +104,12 @@ syntax on
 set mouse=a
 
 filetype plugin indent on
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
 
 set encoding=utf-8
 set fileencodings=utf-8
