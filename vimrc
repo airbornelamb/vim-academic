@@ -28,6 +28,7 @@ Plugin 'gcmt/wildfire.vim'
 Plugin 'Yggdroot/indentLine'
 "Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'reedes/vim-pencil'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
@@ -189,4 +190,4 @@ map <Space>b <Plug>CamelCaseMotion_b
 map <Space>e <Plug>CamelCaseMotion_e
 " }}}
 
-colorscheme office-dark
+colorscheme molokai
