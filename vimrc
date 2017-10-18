@@ -112,6 +112,9 @@ augroup pencil
   autocmd FileType text         call pencil#init()
 augroup END
 
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
 set encoding=utf-8
 set fileencodings=utf-8
 
@@ -186,4 +189,4 @@ map <Space>b <Plug>CamelCaseMotion_b
 map <Space>e <Plug>CamelCaseMotion_e
 " }}}
 
-colorscheme wombat256mod
+colorscheme office-dark
