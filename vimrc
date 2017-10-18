@@ -29,8 +29,8 @@ Plugin 'Yggdroot/indentLine'
 "Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'reedes/vim-pencil'
-Plugin 'junegunn/goyo'
-Plugin 'junegunn/limelight'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 
 "Front End
 Plugin 'pangloss/vim-javascript'
