@@ -1,50 +1,39 @@
 vim-starter
 ===========
 
-Quick starter kit for Vim beginners, including features from modern editors that you might miss when you switch to Vim.
+Quick and lightweight starter kit for academic writing with vim.
 
 ## Installation
 
-After you backup your `~/.vimrc` file and `~/.vim/` folder (this is not important if you haven't used Vim before), you can install this by running this bash line, press enter if you see any error messages:
+After you backup your `~/.vimrc` file and `~/.vim/` folder (this is not important if you haven't used Vim before). The installation will remove vim from the system first because most vim versions ship with python 3 support and we need python 2 support.
+
+### Ubuntu/Debian
 
 ```bash
-echo "runtime vimrc" > ~/.vimrc && mkdir ~/.vim && cd ~/.vim && git clone https://github.com/airbornelamb/vim-starter.git . && git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall
+wget https://raw.githubusercontent.com/airbornelamb/vim-starter/master/install.sh && chmod +x ./install.sh && ./install.sh
 ```
+
+The first time that Vim opens it will launch "vim +PluginInstall" to install all vundle plugins. You may then simply run "vim" in the terminal after that.
 
 You're all set! Enjoy!
 
-## Shortcuts
+## Usage
 
-`<Leader>` is defined as the `\` key by default. `C-x` means Control + x and `M-x` means Meta-x. (*alt* or *option* in modern keyboards) `S-x` means Shift-x.
++ This assumes that you have installed Zotero 4 [here] (https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=4.0.29.10)
++ and Better Bibtex plugin [here](https://github.com/retorquere/zotero-better-bibtex/releases/download/1.6.100/zotero-better-bibtex-1.6.100.xpi)
 
-* `<Leader>y`: Copy to system clipboard
-* `<Leader>d`: Cut to system clipboard
-* `<Leader>p`: Paste below, from system clipboard
-* `<Leader>P`: Paste above, from system clipboard
-* `<F5><F5>`: Toggle paste mode. (Not important if you're using the shortcuts above.)
-* `<F5>`: Reload Vim settings
-* `<Leader>n`: New empty tab.
-* `<Space>x`: Remove search highlight.
-* `<Leader>]`: Open/Close NERDTree
-* `<Leader>[` : Navigate between split views
-* `<Tab>`: Buffer list (Normal Mode)
-* `C-p`: Fuzzy finder
-* ``<Leader>` ``: Swap the positions of the open splits
-* `<Space>w`: Next sub-word in a camel cased word
-* `<Space>b`: Previous sub-word in a camel cased word
-* `<Space>e`: End of sub-word in a camel cased word
-* `C-n`: Add the next occurrence of the selection to the multiple cursor selection
+Your workflow will then be as follows:
+
+1. Import sources into Zotero (manually or with the browser clipper).
+2. Export sources into better bibtex .bib file into your working folder.
+3. Begin editing with vim. IT IS IMPORTANT THAT YOUR PAPER USES .mkd extension and is NAMED THE SAME AS .bib (ex. mypaper.mkd and mypaper.bib)
+  * `<Tab>`: While entering a citation (@bavinck) you may press tab to search and help complete citation keys from your .bib
+  * `:Goyo`: Entering this in normal mode will launch a focus mode for writing sessions
+4. pandoc --citeproc
+
+
+## Extra
 
 Other functions should work as expected. You can define key mappings for your own usage by editing the file `~/.vim/vimrc`, and you are certainly encouraged to do so. That's how you can get the most out of Vim.
 
 If you're looking for a quick tutorial to learn Vim, "[Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)" is a great one.
-
-If copying and pasting with the system clipboard are not working properly, check [this page](http://vim.wikia.com/wiki/Accessing_the_system_clipboard).
-
-## Screenshots
-
-![Screenshot 1](http://i.imgur.com/qEkXK9m.png)
-
-![Screenshot 2](http://i.imgur.com/Elg4TrB.png)
-
-![Screenshot 3](http://i.imgur.com/MSiFlU6.png)
