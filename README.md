@@ -25,7 +25,7 @@ You're all set! Enjoy!
 
 ## Usage
 
-+ This assumes that you have installed Zotero 4 [here] (https://www.zotero.org/download/)
++ This assumes that you have installed Zotero 4 [here](https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=4.0.29.10)
 + and Better Bibtex plugin [here](https://github.com/retorquere/zotero-better-bibtex/releases/download/1.6.100/zotero-better-bibtex-1.6.100.xpi)
 
 Your workflow will then be as follows:
