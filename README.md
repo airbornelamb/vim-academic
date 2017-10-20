@@ -7,6 +7,12 @@ Quick and lightweight starter kit for academic writing with vim.
 
 After you backup your `~/.vimrc` file and `~/.vim/` folder (this is not important if you haven't used Vim before). The installation will remove vim from the system first because most vim versions ship with python 3 support and we need python 2 support.
 
+You could also check if you have python 2 support already:
+
+```bash
+vim --version | grep '+python'
+```
+
 ### Ubuntu/Debian
 
 ```bash
