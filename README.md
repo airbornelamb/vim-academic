@@ -46,11 +46,7 @@ An example workflow will then be as follows:
 
 When you are done writing, use pandoc from the terminal to convert to your final result, such as 
 ```bash
-pandoc PAPER.mkd --smart --standalone \
---bibliography PAPER.bib \ 
---csl=Turabian-NO-Ibid.csl \ 
---reference-docx=prtstemplate.docx \
--o FINALPAPER.docx
+pandoc PAPER.mkd --smart --standalone --bibliography PAPER.bib --csl=Turabian-NO-Ibid.csl --reference-docx=prtstemplate.docx -o FINALPAPER.docx
 ```
 
 ## Extra
