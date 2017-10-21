@@ -44,10 +44,16 @@ An example workflow will then be as follows:
   * `<Tab>`: While entering a citation (ex. @kostenberger) you may press tab to search and insert citation keys
   * `:Goyo`: Entering this in normal mode will launch Goyo and Limelight together for distraction-free writing
 
-When you are done writing, use pandoc from the terminal to convert to your final result, such as 
+When you are done writing, use pandoc from the terminal to convert to your final result, such as DOCX
 ```bash
 pandoc PAPER.mkd --smart --standalone --bibliography PAPER.bib --csl=Turabian-NO-Ibid.csl --reference-docx=prtstemplate.docx -o FINALPAPER.docx
 ```
+
+Or for HTML output
+```bash
+pandoc PAPER.mkd --smart --standalone --bibliography PAPER.bib --csl=Turabian-NO-Ibid.csl --reference-docx=prtstemplate.docx -css splendor.css -o FINALPAPER.html
+```
+
 
 ## Extra
 
