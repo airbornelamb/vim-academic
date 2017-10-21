@@ -50,7 +50,7 @@ pandoc PAPER.mkd --smart --standalone \
 --bibliography PAPER.bib \ 
 --csl=Turabian-NO-Ibid.csl \ 
 --reference-docx=prtstemplate.docx \
--o FINALPAPER.docx`
+-o FINALPAPER.docx
 ```
 
 ## Extra
