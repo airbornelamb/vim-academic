@@ -1,8 +1,10 @@
+sudo apt update
 sudo apt remove vim*
-sudo apt install vim-nox-py2 git wget
+sudo apt install -y vim-nox-py2 git pandoc-citeproc
 echo "runtime vimrc" > ~/.vimrc
 mkdir ~/.vim
 cd ~/.vim
-wget https://raw.githubusercontent.com/airbornelamb/vim-starter/master/vimrc
+git clone https://github.com/airbornelamb/vim-academic.git ~/vim-academic
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cp ~/vim-academic/vimrc ~/.vim/vimrc
 vim +PluginInstall
