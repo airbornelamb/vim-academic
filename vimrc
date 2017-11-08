@@ -13,6 +13,7 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'ervandew/supertab'
+Plugin 'mbbill/undotree'
 
 "Color Schemes
 Plugin 'flazz/vim-colorschemes'
@@ -27,6 +28,12 @@ let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
 
 "Supertab options
 let g:SuperTabDefaultCompletionType = "context"
+
+"Key mappings
+nnoremap <F5> :Goyo<cr>
+nnoremap <F6> :UndotreeToggle<cr>
+nnoremap <F7> :earlier<cr>
+nnoremap <F8> :later<cr>
 
 "set colorscheme
 colorscheme 256-grayvim
