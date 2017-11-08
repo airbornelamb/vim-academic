@@ -43,6 +43,10 @@ An example workflow will then be as follows:
 3. Begin editing with vim. IT IS IMPORTANT THAT YOUR PAPER USES .mkd extension and is NAMED THE SAME AS the bibtex .bib file (ex. mypaper.mkd and mypaper.bib)
   * `<Tab>`: While entering a citation (ex. @kostenberger) you may press tab to search and insert citation keys
   * `:Goyo`: Entering this in normal mode will launch Goyo and Limelight together for distraction-free writing
+  * `<F5>`: Will toggle Goyo (same as entering `:Goyo`
+  * `<F6>`: Will toggle the UndoTree
+  * `<F7>`: Traverses backwards in the UndoTree
+  * `<F8>`: Traverses forwards in the UndoTree
 
 When you are done writing, use pandoc from the terminal to convert to your final result, such as DOCX
 ```bash
