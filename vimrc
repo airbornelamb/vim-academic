@@ -1,5 +1,9 @@
 set nofoldenable "disable folding
 
+" Uncomment the below two lines to enable persistent undo
+" set undodir=~/.vim
+" set undofile
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
