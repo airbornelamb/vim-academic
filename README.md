@@ -47,6 +47,7 @@ An example workflow will then be as follows:
   * `<F6>`: Will toggle the UndoTree
   * `<F7>`: Traverses backwards in the UndoTree
   * `<F8>`: Traverses forwards in the UndoTree
+  * `g <Ctrl-g>`: pressing this sequence in command mode will give you document statistics, including word count.
 
 When you are done writing, use pandoc from the terminal to convert to your final result, such as DOCX
 ```bash
