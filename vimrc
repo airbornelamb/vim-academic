@@ -31,7 +31,7 @@ autocmd! User GoyoLeave Limelight!
 let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
 
 "Supertab options
-let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 "Key mappings
 nnoremap <F5> :Goyo<cr>
