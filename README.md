@@ -17,7 +17,7 @@ You could also check if you have python 2 support already and remove python from
 vim --version | grep '+python'
 ```
 
-### Ubuntu/Debian
+### Ubuntu / Fedora
 
 ```bash
 git clone https://github.com/airbornelamb/vim-academic.git ~/vim-academic
