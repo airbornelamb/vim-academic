@@ -9,9 +9,9 @@ This will give you a minimal vim installation with python 2 support, vundle, pan
 
 ## Installation
 
-Backup your `~/.vimrc` file and `~/.vim/` folder (this is not important if you haven't used Vim before). The installation will remove vim from the system first because most vim versions ship with python 3 support and we need python 2 support.
+Backup your `~/.vimrc` file and `~/.vim/` folder (this is not important if you haven't used Vim before). The installation will remove vim from the system first because some vim versions do not have python support. You will want to install the vim-nox or vim packages for your distribution.
 
-You could also check if you have python 2 support already and remove python from the install script:
+You could also check if you have support already and remove python from the install script:
 
 ```bash
 vim --version | grep '+python'
