@@ -1,4 +1,8 @@
 set nofoldenable "disable folding
+filetype plugin indent on "recommended settings
+syntax on "turns on syntax highlighting
+
+" set omnifunc=syntaxcomplete#Complete
 
 " Uncomment the below two lines to enable persistent undo
 " set undodir=~/.vim
