@@ -1,13 +1,20 @@
-set nocompatible " might be redundant
-set nofoldenable "disable folding
-filetype plugin indent on
-syntax on "turns on syntax highlighting
-set omnifunc=syntaxcomplete#Complete "turn on omnicompletion
-set laststatus=2 "turn statusline on
+set nocompatible 	   "force Vim over vi
+set nofoldenable 	   "disable folding
+filetype plugin indent on  "Load plugins according to detected filetype
+syntax on 		   "turns on syntax highlighting
+set omnifunc=syntaxcomplete#Complete "set omnifunc to syntax completion
+
+set laststatus =2          " Always show statusline.
+set autoindent             " Indent according to previous line.
+set expandtab              " Use spaces instead of tabs.
+set softtabstop =4         " Tab key indents by 4 spaces.
+set shiftwidth  =4         " >> indents by 4 spaces.
+set shiftround             " >> indents to next multiple of 'shiftwidth'.
+set backspace =indent,eol,start  " Make backspace work as you would expect.
 
 " Uncomment the below two lines to enable persistent undo
-" set undodir=~/.vim
 " set undofile
+" set undodir =$HOME/.vim/files/undo/
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -24,6 +31,8 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'ervandew/supertab'
 Plugin 'mbbill/undotree'
 Plugin 'reedes/vim-litecorrect'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
 
 
 "Color Schemes
