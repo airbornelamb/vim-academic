@@ -31,8 +31,8 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'ervandew/supertab'
 Plugin 'mbbill/undotree'
 Plugin 'reedes/vim-litecorrect'
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Plug 'junegunn/fzf.vim'
+" Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plugin 'junegunn/fzf.vim'
 
 
 "Color Schemes
