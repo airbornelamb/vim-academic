@@ -48,6 +48,7 @@ An example workflow will then be as follows:
   * `<F7>`: Traverses backwards in the UndoTree
   * `<F8>`: Traverses forwards in the UndoTree
   * `g <Ctrl-g>`: pressing this sequence in command mode will give you document statistics, including word count.
+  * `:F` : Will start full-text search with fzf and ripgrep. Very powerful!
   
 # Conversion
 
