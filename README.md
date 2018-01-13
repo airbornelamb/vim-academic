@@ -50,6 +50,27 @@ An example workflow will then be as follows:
   * `g <Ctrl-g>`: pressing this sequence in command mode will give you document statistics, including word count.
   * `:F` : Will start full-text search with fzf and ripgrep. Very powerful!
   
+FZF Key bindings for command line ( from junegunn/fzf )
+-----------------------------
+
+The install script will setup the following key bindings for bash, zsh, and
+fish.
+
+- `CTRL-T` - Paste the selected files and directories onto the command line
+    - Set `FZF_CTRL_T_COMMAND` to override the default command
+    - Set `FZF_CTRL_T_OPTS` to pass additional options
+- `CTRL-R` - Paste the selected command from history onto the command line
+    - If you want to see the commands in chronological order, press `CTRL-R`
+      again which toggles sorting by relevance
+    - Set `FZF_CTRL_R_OPTS` to pass additional options
+- `ALT-C` - cd into the selected directory
+    - Set `FZF_ALT_C_COMMAND` to override the default command
+    - Set `FZF_ALT_C_OPTS` to pass additional options
+
+If you're on a tmux session, you can start fzf in a split pane by setting
+`FZF_TMUX` to 1, and change the height of the pane with `FZF_TMUX_HEIGHT`
+(e.g. `20`, `50%`).
+  
 # Conversion
 
 When you are done writing, use pandoc from the terminal to convert to your final result, such as DOCX
