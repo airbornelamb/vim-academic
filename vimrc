@@ -1,3 +1,21 @@
+""" Auto Installation for Plug, FZF, and RipGrep credit to https://github.com/bag-man/dotfiles
+
+  if empty(glob("~/.vim/autoload/plug.vim"))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    auto VimEnter * PlugInstall
+  endif
+
+  if !empty(glob("~/.fzf/bin/fzf"))
+    if empty(glob("~/.fzf/bin/rg"))
+      silent !curl -fLo /tmp/rg.tar.gz
+            \ https://github.com/BurntSushi/ripgrep/releases/download/0.7.1/ripgrep-0.7.1-x86_64-unknown-linux-musl.tar.gz
+      silent !tar xzvf /tmp/rg.tar.gz --directory /tmp
+      silent !cp /tmp/ripgrep-0.7.1-x86_64-unknown-linux-musl/rg ~/.fzf/bin/rg
+    endif
+endif
+
+
 set nocompatible 	   "force Vim over vi
 set nofoldenable 	   "disable folding
 filetype plugin indent on  "Load plugins according to detected filetype
@@ -16,30 +34,26 @@ set backspace =indent,eol,start  " Make backspace work as you would expect.
 " set undofile
 " set undodir =$HOME/.vim/files/undo/
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+" PLUGINS
 
-call vundle#begin()
-Plugin 'gmarik/vundle'
+call plug#begin('~/.vim/plugged')
 
-" Main plugins
+Plug 'vim-pandoc/vim-pandoc'			" Pandoc file support
+Plug 'vim-pandoc/vim-pandoc-syntax'		" Pandoc syntax support
+Plug 'junegunn/goyo.vim'			" Distraction-free mode
+Plug 'junegunn/limelight.vim'			" Highlights current line
+Plug 'ervandew/supertab'			" Helps tab completion
+Plug 'mbbill/undotree'				" Visually displays the undo tree
+Plug 'reedes/vim-litecorrect'			" Corrects common prose errors
+Plug 'matze/vim-move'				" Allows move lines
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }	" Fuzzy file finder
+Plug 'junegunn/fzf.vim'				" Vim bindings for fzf
+"Plug 'suan/vim-instant-markdown'		" markdown preview, requires extra install
+Plug 'flazz/vim-colorschemes'			" Colorscheme pack
 
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
-Plugin 'ervandew/supertab'
-Plugin 'mbbill/undotree'
-Plugin 'reedes/vim-litecorrect'
-" Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Plugin 'junegunn/fzf.vim'
+call plug#end()
 
-
-"Color Schemes
-Plugin 'flazz/vim-colorschemes'
-
-call vundle#end()
-
+" Bind Goyo to Limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
@@ -72,6 +86,14 @@ endfunction
 
 "Create status line
 set statusline=%f%=%{WordCount()}\ words\ -\ %{strftime('%R')}
+
+" Enable ripgrep for fulltext search with :F
+let g:rg_command = '
+  \ rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --color "always"
+  \ -g "*.{js,json,php,md,styl,jade,html,config,py,cpp,c,go,hs,rb,conf}"
+  \ -g "!{.git,node_modules,vendor}/*" '
+
+command! -bang -nargs=* F call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 
 "Key mappings
 nnoremap <F5> :Goyo<cr>
