@@ -1,9 +1,9 @@
 sudo apt update
 sudo apt remove vim*
-sudo apt install -y vim-nox-py2 git pandoc pandoc-citeproc
+sudo apt install -y vim-nox-py2 git pandoc pandoc-citeproc highlight
 
 sudo dnf -y update
-sudo dnf -y install vim-enhanced git pandoc pandoc-citeproc
+sudo dnf -y install vim-enhanced git pandoc pandoc-citeproc highlight
 
 echo "runtime vimrc" > ~/.vimrc
 mkdir ~/.vim
