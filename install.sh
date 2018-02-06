@@ -1,6 +1,7 @@
 sudo apt update
 sudo apt remove vim*
-sudo apt install -y vim-nox-py2 git pandoc pandoc-citeproc ranger
+#sudo apt install -y vim-nox-py3
+sudo apt install -y git pandoc pandoc-citeproc ranger
 
 sudo dnf -y update
 sudo dnf -y install vim-enhanced git pandoc pandoc-citeproc ranger
