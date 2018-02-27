@@ -43,13 +43,14 @@ Plug 'vim-pandoc/vim-pandoc-syntax'		" Pandoc syntax support
 Plug 'junegunn/goyo.vim'			" Distraction-free mode
 Plug 'junegunn/limelight.vim'			" Highlights current line
 Plug 'ervandew/supertab'			" Helps tab completion
-Plug 'mbbill/undotree'				" Visually displays the undo tree
+"Plug 'mbbill/undotree'				" Visually displays the undo tree
 Plug 'reedes/vim-litecorrect'			" Corrects common prose errors
 Plug 'matze/vim-move'				" Allows move lines
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }	" Fuzzy file finder
 Plug 'junegunn/fzf.vim'				" Vim bindings for fzf
 "Plug 'suan/vim-instant-markdown'		" markdown preview, requires extra install
-Plug 'flazz/vim-colorschemes'			" Colorscheme pack
+"Plug 'flazz/vim-colorschemes'			" Colorscheme pack
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -102,4 +103,5 @@ nnoremap <F7> :earlier<cr>
 nnoremap <F8> :later<cr>
 
 "set colorscheme
-colorscheme 256-grayvim
+"colorscheme 256-grayvim
+colorscheme onedark
