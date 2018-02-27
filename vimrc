@@ -43,7 +43,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'		" Pandoc syntax support
 Plug 'junegunn/goyo.vim'			" Distraction-free mode
 Plug 'junegunn/limelight.vim'			" Highlights current line
 Plug 'ervandew/supertab'			" Helps tab completion
-"Plug 'mbbill/undotree'				" Visually displays the undo tree
+Plug 'mbbill/undotree'				" Visually displays the undo tree
 Plug 'reedes/vim-litecorrect'			" Corrects common prose errors
 Plug 'matze/vim-move'				" Allows move lines
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }	" Fuzzy file finder
