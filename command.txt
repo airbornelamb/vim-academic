@@ -1,6 +1,6 @@
 with citations
 
-pandoc PAPER.mkd --smart --standalone --bibliography PAPER.bib --csl=Turabian-NO-Ibid.csl --reference-docx=prtstemplate.docx -o FINALPAPER.docx
+pandoc PAPER.mkd  --standalone --bibliography PAPER.bib --csl=Turabian-NO-Ibid.csl --reference-doc=prtstemplate.docx -o FINALPAPER.docx
 
 
 
